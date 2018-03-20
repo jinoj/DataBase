@@ -1,0 +1,10 @@
+ 1055 Expression #18 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'creighton_mma_craft.structureelements.root' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+ 
+ sudo vim /etc/mysql/my.cnf
+Scroll to the bottom of file and A to enter insert mode
+Copy and paste [mysqld]
+sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION to the bottom of the file
+esc to exit input mode
+:wq to save and close vim.
+sudo service mysql restart to restart MySQL.
+Done!
